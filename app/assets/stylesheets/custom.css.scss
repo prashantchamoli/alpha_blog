@@ -1,3 +1,40 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+$navbar-default-bg: #000000;
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.navbar{
+  border-radius: 0px;
+  margin-top: 20px;
+}
+#logo{
+  float: left;
+  font-size: 1.7em;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.jumbotron{
+  background-image: asset-url('learn-from-best.jpg') ;
+  background-size: cover ;
+  min-height: 500px;
+  padding: 15% 0 15% 0;
+}
+.jumbotron h1
+{
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #000000;
+}
+.jumbotron p{
+  width: 65%;
+}
+.btn-xlarge
+{
+  font-size: 1em;
+  background: #000000;
+  padding: 5px 30px 5px 30px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 0px;
+}
