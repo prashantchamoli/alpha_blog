@@ -1,11 +1,4 @@
-<%if @article.errors.any? %>
-<h3>ERRORS</h3>
-<ul>
-  <% @article.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-  </ul>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
 <div class="row">
     <div class="col-xs-12">
       <%= form_for(@article, :html => {class: "form-horizontal", role: "form"})  do |f| %>
@@ -25,16 +18,17 @@
             <%= f.text_area :description, rows: 10, class: "form-control", placeholder:"Write Article", autofocus: true %>
           </div>
         </div>
-        <div class ="form-label">
-          <div class="col-sm-8">
+        <div class ="form-group">
+          <div class="col-sm-offset-2 col-sm-2">
             <%= f.submit class: "btn btn-primary btn-lg" %>
           </div>
-        </div>
         <% end %>
-      <div class="col-sm-8">
-        <div class="cancel-article">
-          [ <%= link_to 'Not Sure? Cancel Article', articles_path, data: {confirm: "Are you Sure?"} %> ]
+          <div class="col-sm-6">
+            <div class="cancel-article">
+              [ <%= link_to 'Not Sure? Cancel Article', articles_path, data: {confirm: "Are you Sure?"} %> ]
+            </div>
+          </div>
         </div>
-      </div>
+
     </div>
 </div>
